@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    box-shadow: .5vh .5vh .5vh lightgray;
+    padding: .5%;
+    font-size: 20px;
+}
+
+header>div {
+    width: 33.3%;
+    margin: auto;
+}
+
+#title {
+    color: #2E0039;
+    font-weight: bolder;
+}
+
+#title::before {
+    background-image: url("../images/arrow_conversion_icon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    content: "";
+}
+
+main {
+    width: 33.3%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+#conversor {
+    color: white;
+    background-color: #2E0039;
+    margin: auto;
+}
+
+input[type="text"],
+select {
+    border: none;
+    background-color: #2E0039;
+    color: white;
+}
+
+select {
+    width: 100%;
+}
+
+#select_parent {
+    border-bottom: 2px solid white;
+    width: 50%;
+}
+
+#select_parent::after {
+    background-image: url("../images/arrow_conversion_icon_white.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline;
+    position: fixed;
+    width: 24px;
+    height: 24px;
+    content: "";
+}
+
+option {
+    background-color: #2E0039;
+    margin: 1%;
+}
+
+input[type="text"]{
+    width: 40%;
+}

@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 
 <html>
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Unit Converter</title>
-        <meta name="description" content="">
+        <meta name="description" content>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/styles.css">
-        <link rel="script" href="./js/scripts.js">
+        <script src="./js/scripts.js"></script>
     </head>
+
     <body>
-z
+        <header>
+            <div>
+                <p id="title">unit converter</p>
+            </div>
+        </header>
+        <main>
+            <div id="conversor">
+                <p>convert</p>
+                <div>
+                    <div id="select_parent">
+                        <select>
+                            <option value="0">km &#8594 mi</option>
+                            <option value="1">mi &#8594 km</option>
+                            <option value="2">ft &#8594 m</option>
+                            <option value="3">m &#8594 ft</option>
+                            <option value="4">cm &#8594 in</option>
+                            <option value="5">in &#8594 cm</option>
+                        </select>
+                    </div>
+                    <input name="input" type="text" value="0">
+                </div>
+                <div>
+                    <p id="output"></p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <a></a>
+                <a></a>
+            </div>
+        </footer>
     </body>
+
 </html>
