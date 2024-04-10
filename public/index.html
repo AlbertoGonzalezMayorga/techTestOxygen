@@ -9,7 +9,7 @@
     <meta name="description" content>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/scripts.js"></script>
+    <script src="./js/scripts.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -29,7 +29,7 @@
             <div class="flex-row padding-between">
                 <div id="select_parent">
                     <select name="units" title="units">
-                        <option value="0">km &#8594 mi</option>
+                        <option value="0" selected="true">km &#8594 mi</option>
                         <option value="1">mi &#8594 km</option>
                         <option value="2">ft &#8594 m</option>
                         <option value="3">m &#8594 ft</option>
@@ -38,8 +38,8 @@
                     </select>
                 </div>
                 <div id="input_parent">
-                    <input name="input" title="quantity" type="text" value="0">
-                    <label for="input">km</label>
+                    <input name="user-input" title="quantity" type="number" value="0">
+                    <label for="user-input">mi</label>
                 </div>
 
             </div>
@@ -47,9 +47,24 @@
                 <button id="favorite_button" type="button">
                     <img src="./images/white_empty_heart.png" width="24px" height="24px" alt="favorite">
                 </button>
-                <p id="output_text">output</p>
+                <p id="output_text" >____</p>
             </div>
         </div>
+        <table>
+            <th>saved</th>
+            <tr>
+                <td>hola<button><img src="./images/cross_button_icon.png" width="24px" height="24px"></button></td>
+                <td>hola</td>
+            </tr>
+            <tr>
+                <td>hola</td>
+                <td>hola</td>
+            </tr>
+            <tr>
+                <td>hola</td>
+                <td>hola</td>
+            </tr>
+        </table>
     </main>
     <footer>
         <div>
