@@ -4,6 +4,20 @@
     margin: 0px;
 }
 
+button {
+    background: none;
+    border: none;
+    cursor:pointer;
+    transform: scale(1);
+    transition-duration: .3s;
+}
+
+button:hover{
+    transform: scale(1.2);
+    transition-duration: .3s;
+}
+
+
 header {
     box-shadow: .5vh .5vh .5vh lightgray;
     padding: .5%;
@@ -11,13 +25,12 @@ header {
 }
 
 header>div {
-    width: 33.3%;
+    width: 50%;
     margin: auto;
 }
 
 #title {
     color: #2E0039;
-    font-weight: bolder;
 }
 
 #title::before {
@@ -25,14 +38,15 @@ header>div {
     background-repeat: no-repeat;
     background-size: cover;
     display: inline-block;
-    position: fixed;
+    position: relative;
     width: 32px;
     height: 32px;
+    top: 11px;
     content: "";
 }
 
 main {
-    width: 33.3%;
+    width: 50%;
     margin: auto;
     margin-top: 2%;
 }
@@ -41,6 +55,8 @@ main {
     color: white;
     background-color: #2E0039;
     margin: auto;
+    border-radius: 15px;
+    padding-right: 15%;
 }
 
 input[type="text"],
@@ -52,11 +68,22 @@ select {
 
 select {
     width: 100%;
+    cursor:pointer;
 }
+
+input[type="text"] {
+    border-bottom: 2px solid white;
+    text-align: end;
+}
+
+label {
+    font-size: .7em;
+}
+
 
 #select_parent {
     border-bottom: 2px solid white;
-    width: 50%;
+    width: 40%;
 }
 
 #select_parent::after {
@@ -75,6 +102,47 @@ option {
     margin: 1%;
 }
 
-input[type="text"]{
-    width: 40%;
+#output_text {
+    float: right;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.padding-small {
+    padding: 1%;
+}
+
+.padding-mid {
+    padding: 2%;
+}
+
+.padding-large {
+    padding: 4%;
+}
+
+.padding-between {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.margin-between {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+.poppins {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
 }
