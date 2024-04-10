@@ -50,45 +50,77 @@ function convert() {
     output_box.innerHTML = result.toFixed(2) + " " + units_reverse[selection]
 }
 
-function generate_td_element() {
-    var table = document.querySelector("table")
-    var user_input = document.querySelector("input")
-    var user_input_label = document.querySelector("label")
-    var output_box = document.querySelector("#output_text")
+function draw_td_element(value, value_attr) {
 
+    if (!value)
+        return
+
+    var tbody = document.querySelector("tbody")
     var td_array = document.querySelectorAll("td")
 
-    if (td_array.length % 2 == 0) {
-        var tr = document.createElement("tr")
-    }
+    var tr = null
+    tr = td_array.length % 2 == 0 ?
+        document.createElement("tr") :
+        document.querySelector("table tr:last-of-type")
+
     var td = document.createElement("td")
-    var value = user_input.value + " " + user_input_label.innerHTML + " &#8594 " + output_box.innerHTML
-    td.appendChild(docujment.createTextNode(value))
-    var del_button = document.createElement('button')
+
+    td.innerHTML = value
+    var del_button = document.createElement("button")
     del_button.addEventListener("click", delete_stored)
-    var del_image = document.createElement('image')
+    del_button.setAttribute("value", value_attr)
+    var del_image = document.createElement('img')
     del_image.setAttribute("src", "./images/cross_button_icon.png")
     del_image.setAttribute("width", "24px")
     del_image.setAttribute("height", "24px")
 
     del_button.appendChild(del_image)
     td.appendChild(del_button)
-    if (tr != null) {
-        tr.appendChild(td)
-    }
 
-
-    //<td>hola<button><img src="./images/cross_button_icon.png" width="24px" height="24px"></button></td>
+    tr.appendChild(td)
+    tbody.appendChild(tr)
 }
 
 function delete_stored() {
-
+    localStorage.removeItem(this.value)
+    this.parentElement.remove()
 }
 
 function store_value() {
-    //TODO store values and draw them when reloading pages
+    var output_box = document.querySelector("#output_text")
+    var user_input = document.querySelector("input")
+    var user_input_label = document.querySelector("label")
+    if (output_box.innerHTML == "") {
+        alert("You've not converted anything yet!")
+        return
+    }
+    var key = genHexString(15)
+    var value = user_input.value + " " + user_input_label.innerHTML + " &#8594; " + output_box.innerHTML
+    draw_td_element(value, key)
+    localStorage.setItem(key, value)
+    output_box.innerHTML = ""
+    user_input.value = 0
+
+}
+
+function draw_stored() {
     var size = localStorage.length
-    localStorage.setItem(size, "")
+    if (size > 0) {
+        for (var i = 0; i < 6; i++) {
+            var stored_value = localStorage.getItem(localStorage.key(i));
+            draw_td_element(stored_value, localStorage.key(i))
+
+        }
+    }
+}
+
+function genHexString(len) {
+    var output = '';
+    for (let i = 0; i < len; ++i) {
+        output += (Math.floor(Math.random() * 16)).toString(16);
+    }
+    return output;
 }
 
 set_events()
+draw_stored()

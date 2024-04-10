@@ -2,76 +2,69 @@
 
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Unit Converter</title>
-    <meta name="description" content>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/scripts.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Unit Converter</title>
+        <meta name="description" content>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/styles.css">
+        <script src="./js/scripts.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+    </head>
 
-<body class="poppins">
-    <header>
-        <div>
-            <p id="title" class="bolder">unit converter</p>
-        </div>
-    </header>
-    <main>
-        <div id="conversor" class="padding-large">
-            <p class="bold">convert</p>
-            <div class="flex-row padding-between">
-                <div id="select_parent">
-                    <select name="units" title="units">
-                        <option value="0" selected="true">km &#8594 mi</option>
-                        <option value="1">mi &#8594 km</option>
-                        <option value="2">ft &#8594 m</option>
-                        <option value="3">m &#8594 ft</option>
-                        <option value="4">cm &#8594 in</option>
-                        <option value="5">in &#8594 cm</option>
-                    </select>
-                </div>
-                <div id="input_parent">
-                    <input name="user-input" title="quantity" type="number" value="0">
-                    <label for="user-input">mi</label>
-                </div>
+    <body class="poppins">
+        <header>
+            <div>
+                <p id="title" class="bolder">unit converter</p>
+            </div>
+        </header>
+        <main>
+            <div id="conversor" class="padding-large">
+                <p class="bold">convert</p>
+                <div class="flex-row padding-between">
+                    <div id="select_parent">
+                        <select name="units" title="units">
+                            <option value="0" selected="true">km &#8594 mi</option>
+                            <option value="1">mi &#8594 km</option>
+                            <option value="2">ft &#8594 m</option>
+                            <option value="3">m &#8594 ft</option>
+                            <option value="4">cm &#8594 in</option>
+                            <option value="5">in &#8594 cm</option>
+                        </select>
+                        <img src="./images/arrow_conversion_icon_white.png"
+                            width="24px" height="24px">
+                    </div>
 
+                    <div id="input_parent">
+                        <input name="user-input" title="quantity" type="number"
+                            value="0">
+                        <label for="user-input">mi</label>
+                    </div>
+
+                </div>
+                <div class="margin-between">
+                    <button id="favorite_button" type="button">
+                        <img src="./images/white_empty_heart.png" width="24px"
+                            height="24px" alt="favorite">
+                    </button>
+                    <p id="output_text"></p>
+                </div>
             </div>
-            <div class="margin-between">
-                <button id="favorite_button" type="button">
-                    <img src="./images/white_empty_heart.png" width="24px" height="24px" alt="favorite">
-                </button>
-                <p id="output_text" >____</p>
+            <table>
+                <th>saved</th>
+            </table>
+        </main>
+        <footer>
+            <div>
+                <a></a>
+                <a></a>
             </div>
-        </div>
-        <table>
-            <th>saved</th>
-            <tr>
-                <td>hola<button><img src="./images/cross_button_icon.png" width="24px" height="24px"></button></td>
-                <td>hola</td>
-            </tr>
-            <tr>
-                <td>hola</td>
-                <td>hola</td>
-            </tr>
-            <tr>
-                <td>hola</td>
-                <td>hola</td>
-            </tr>
-        </table>
-    </main>
-    <footer>
-        <div>
-            <a></a>
-            <a></a>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 
 </html>

@@ -37,7 +37,7 @@ td {
     box-shadow: 0px 0px 2px 2px #0000001A;
 }
 
-td:hover{
+td:hover {
     background-color: darkgray;
 }
 
@@ -79,6 +79,13 @@ main {
     width: 50%;
     margin: auto;
     margin-top: 2%;
+    margin-bottom: 10%;
+}
+
+footer {
+    clear: both;
+    background-color: #2E0039;
+    height: 30px;
 }
 
 #conversor {
@@ -94,12 +101,13 @@ select {
     border: none;
     background-color: #2E0039;
     color: white;
-    
 }
 
 select {
     width: 100%;
     cursor: pointer;
+    border-bottom: 2px solid white;
+
 }
 
 input[type="number"] {
@@ -111,28 +119,21 @@ input[type="number"] {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
 }
 
 label {
     font-size: .7em;
 }
 
-
 #select_parent {
-    border-bottom: 2px solid white;
-    width: 40%;
-}
-
-#select_parent::after {
-    background-image: url("../images/arrow_conversion_icon_white.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: inline;
-    position: fixed;
-    width: 24px;
-    height: 24px;
-    content: "";
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: center;
 }
 
 option {
