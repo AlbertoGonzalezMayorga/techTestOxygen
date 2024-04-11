@@ -4,6 +4,29 @@
     margin: 0px;
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+header {
+    box-shadow: .5vh .5vh .5vh lightgray;
+    padding: .5%;
+    font-size: 20px;
+}
+
+header>p {
+    width: 50%;
+    margin: auto;
+}
+
+main {
+    width: 50%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 10%;
+}
+
 button {
     background: none;
     border: none;
@@ -31,7 +54,6 @@ th {
 
 td {
     padding: 1%;
-    width: 50%;
     background-color: #E3E3E3;
     border-radius: 10px;
     box-shadow: 0px 0px 2px 2px #0000001A;
@@ -45,55 +67,6 @@ td>button {
     float: inline-end;
     font-size: 1.2em;
     cursor: pointer;
-}
-
-
-header {
-    box-shadow: .5vh .5vh .5vh lightgray;
-    padding: .5%;
-    font-size: 20px;
-}
-
-header>div {
-    width: 50%;
-    margin: auto;
-}
-
-#title {
-    color: #2E0039;
-}
-
-#title::before {
-    background-image: url("../images/arrow_conversion_icon.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: inline-block;
-    position: relative;
-    width: 32px;
-    height: 32px;
-    top: 11px;
-    content: "";
-}
-
-main {
-    width: 50%;
-    margin: auto;
-    margin-top: 2%;
-    margin-bottom: 10%;
-}
-
-footer {
-    clear: both;
-    background-color: #2E0039;
-    height: 30px;
-}
-
-#conversor {
-    color: white;
-    background-color: #2E0039;
-    margin: auto;
-    border-radius: 21px;
-    padding-right: 15%;
 }
 
 input[type="number"],
@@ -126,6 +99,73 @@ label {
     font-size: .7em;
 }
 
+option {
+    background-color: #2E0039;
+    margin: 1%;
+}
+
+footer {
+    display: inline-flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    clear: both;
+    background-color: #2E0039;
+    color: white;
+    padding: 1%;
+}
+
+footer>div{
+    width: 50%;
+}
+
+
+footer>div:first-of-type {
+    
+    text-align: end;
+    padding-right: 1%;
+}
+
+footer>div:nth-of-type(2) {
+    text-align: start;
+    padding-left: 1%;
+}
+
+a,
+a:visited {
+    width:100%;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 1%;
+    text-decoration: none;
+    color: white;
+}
+
+
+#title {
+    color: #2E0039;
+}
+
+#title::before {
+    background-image: url("../images/arrow_conversion_icon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    top: 11px;
+    content: "";
+}
+
+#conversor {
+    color: white;
+    background-color: #2E0039;
+    margin: auto;
+    border-radius: 21px;
+    padding-right: 15%;
+}
+
 #select_parent {
     width: 50%;
     display: flex;
@@ -134,11 +174,6 @@ label {
     align-content: space-between;
     justify-content: space-between;
     align-items: center;
-}
-
-option {
-    background-color: #2E0039;
-    margin: 1%;
 }
 
 #output_text {
@@ -184,4 +219,35 @@ option {
 .poppins {
     font-family: "Poppins", sans-serif;
     font-style: normal;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 90%;
+    }
+
+    div.flex-row {
+        flex-direction: column;
+    }
+
+    #select_parent {
+        width: 100%;
+    }
+
+    input[type="number"] {
+        width: 88%;
+    }
+
+    td {
+        display: inline-block;
+        width: 100%;
+        margin: 1%;
+    }
+
+}
+
+@media (min-width: 300px) and (max-width: 370px) {
+    input[type="number"] {
+        width: 80%;
+    }
 }
